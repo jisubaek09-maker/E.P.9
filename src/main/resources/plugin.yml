@@ -1,0 +1,50 @@
+name: GeoHint
+version: 2.2.0
+main: com.bshs.geohint.GeoHintPlugin
+api-version: '26.3'
+author: bshs-team6
+description: 부산과학고 지구과학실험 - 상대연령·절대연령 지층 추론 수행평가 플러그인
+
+commands:
+  geohelp:
+    description: 명령어 목록
+    aliases: [도움말, gh]
+  hint:
+    description: 시료 분석 (방사성 동위원소 힌트, 시료 30개 소모, 팀당 5회)
+  answer:
+    description: 답안지 열기
+  team:
+    description: 소속 팀 정하기
+    usage: /team <1-5>
+  set:
+    description: 지금 위치를 복귀 지점으로 저장
+  back:
+    description: 저장한 복귀 지점으로 이동
+  dm:
+    description: 다른 플레이어에게 귓속말
+    usage: /dm <닉네임> <내용>
+  health:
+    description: 체력을 가득 채웁니다
+  hungry:
+    description: 허기를 가득 채웁니다
+  pickaxe:
+    description: 곡괭이·화석 나침반·조사 노트 다시 받기
+    aliases: [곡괭이, tools]
+  start:
+    description: (관리자) 3초 카운트다운 후 30분 탐사 시작
+    permission: geohint.admin
+  stop:
+    description: (관리자) 강제 종료 - 작성 중인 답안 채점 후 순위 발표
+    permission: geohint.admin
+  reset:
+    description: (관리자) 캔 블록·진행도·인벤토리 전부 초기화
+    permission: geohint.admin
+  geo:
+    description: (관리자) 팀 모형 등록·관리
+    usage: /geo <setregion|removeregion|wall|setteam|list|reload>
+    permission: geohint.admin
+
+permissions:
+  geohint.admin:
+    description: GeoHint 관리자 권한 (OP)
+    default: op
